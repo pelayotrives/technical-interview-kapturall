@@ -26,6 +26,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Source Sans 3', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -38,19 +39,10 @@ body {
     margin: 0;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
-main,
-menu,
 nav,
-section,
-summary {
+section {
     display: block;
 }
 
@@ -67,38 +59,9 @@ a:hover {
     color: var(--kapturall-red-hover);
 }
 
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
 img {
     border: 0;
     max-width: 100%;
-}
-
-hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
 }
 
 button {
@@ -109,13 +72,8 @@ button {
     transition: var(--kapturall-transition);
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled] {
     cursor: default;
-}
-
-input {
-    line-height: normal;
 }
 
 /* -- Navigation -- */
@@ -124,7 +82,9 @@ input {
     align-items: center;
     background-color: var(--kapturall-lightgray);
     width: 100vw;
-    height: 90px;
+    height: 75px;
+    position: fixed;
+    z-index: 4;
 }
 
 .navigation-menu-container {
@@ -191,6 +151,7 @@ input {
     height: fit-content;
     background: url('./public/hero-background-kapturall-2.png') no-repeat center;
     background-size: cover;
+    padding-top: 75px;
 }
 
 .header-container {
@@ -378,7 +339,7 @@ input {
     align-items: center;
     background-color: var(--kapturall-gray);
     width: 100vw;
-    height: 80px;
+    height: 75px;
 }
 
 .footer-menu-container {
@@ -413,6 +374,12 @@ input {
 
 
 /* -- Media Queries -- */
+@media (max-width: 950px) {
+    .grid-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 800px) {
     .header-container {
         align-items: center;
@@ -441,7 +408,7 @@ input {
         display: none;
         position: absolute;
         z-index: 2;
-        top: 90px;
+        top: 75px;
         left: 0;
         width: 100%;
         background-color: var(--kapturall-lightgray);
@@ -479,9 +446,20 @@ input {
     .header-text-section h1 {
         font: 400 6.5rem/7.5rem 'Poppins', sans-serif;
     }
+
+    .introduction-container-description h2,
+    .grid-container h2,
+    .bottom-section-container h2 {
+        font: 500 5rem 'Poppins', sans-serif;
+    }
+
 }
 
 @media (max-width: 600px) {
+    .grid-images {
+        grid-template-columns: 1fr;
+    }
+    
     .footer-menu {
         height: 90px;
     }
@@ -503,6 +481,18 @@ input {
 
     .header-text-section h1 {
         font: 400 5rem/6rem 'Poppins', sans-serif;
+    }
+
+    .introduction-container-description h2,
+    .grid-container h2,
+    .bottom-section-container h2 {
+        font: 500 4rem 'Poppins', sans-serif;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-menu {
+        height: 110px;
     }
 }
 
