@@ -205,7 +205,6 @@ button[disabled] {
 
 .header-logo {
     width: 200px;
-    filter: brightness(5);
 }
 
 .header-text-section h1 {
