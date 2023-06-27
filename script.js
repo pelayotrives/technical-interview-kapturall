@@ -32,4 +32,43 @@ document.addEventListener("DOMContentLoaded", function () {
     opacity: 0,
     duration: 1.5,
   });
+
+  if (window.innerWidth > 1176) {
+    var tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".introduction-columns",
+        start: "top center",
+        end: "bottom center",
+        scrub: 2,
+      },
+    });
+
+    for (var i = 1; i <= 6; i++) {
+      tl2
+        .to("#introduction-column-" + i, { scale: 1.1, duration: 2 })
+        .to("#introduction-column-" + i, { scale: 1.0, duration: 2 });
+    }
+  }
+
+  gsap.from("#image-section-text-h2", {
+    y: -35,
+    scrollTrigger: {
+      trigger: ".image-section-text-column",
+      start: "top center",
+      end: "bottom center",
+      scrub: 1,
+    },
+    duration: 1.5,
+  });
+
+  gsap.from("#grid-section-h2", {
+    y: -35,
+    scrollTrigger: {
+      trigger: ".grid-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: 1,
+    },
+    duration: 1.5,
+  });
 });
