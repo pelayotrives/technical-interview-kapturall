@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let tl = gsap.timeline();
 
-  tl.delay(1.25);
+  tl.delay(1.5);
 
   tl.from(".header-image-section", {
     x: -200,
