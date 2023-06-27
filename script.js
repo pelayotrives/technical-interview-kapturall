@@ -1,7 +1,13 @@
+// Spinner
+window.addEventListener("load", function () {
+  let spinner = document.getElementById('spinner');
+  spinner.style.display = 'none';
+});
+
 // Hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
-  var hamburger = document.getElementById("hamburger");
-  var nav = document.getElementById("navigation");
+  let hamburger = document.getElementById("hamburger");
+  let nav = document.getElementById("navigation");
 
   hamburger.addEventListener("click", function () {
     if (nav.style.display === "none" || nav.style.display === "") {
@@ -20,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Micro animations
 document.addEventListener("DOMContentLoaded", function () {
-  var tl = gsap.timeline();
+  let tl = gsap.timeline();
 
   tl.from(".header-image-section", {
     x: -200,
@@ -34,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (window.innerWidth > 1176) {
-    var tl2 = gsap.timeline({
+    let tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".introduction-columns",
         start: "top center",
@@ -43,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
 
-    for (var i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 6; i++) {
       tl2
         .to("#introduction-column-" + i, { scale: 1.1, duration: 2 })
         .to("#introduction-column-" + i, { scale: 1.0, duration: 2 });

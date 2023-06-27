@@ -76,6 +76,35 @@ button[disabled] {
     cursor: default;
 }
 
+/* -- Spinner -- */
+.spinner {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 10px solid var(--kapturall-medium-gray);
+    border-top: 10px solid var(--kapturall-red);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 /* -- Navigation -- */
 .navigation-menu {
     display: flex;
@@ -149,7 +178,7 @@ button[disabled] {
 /* -- Header -- */
 .header-section {
     height: fit-content;
-    background: url('./public/hero-background-kapturall-2.png') no-repeat center;
+    background: url('./public/hero-background-kapturall-2.jpg') no-repeat center;
     background-size: cover;
     padding-top: 75px;
 }
