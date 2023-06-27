@@ -1,7 +1,10 @@
 // Spinner
 window.addEventListener("load", function () {
   let spinner = document.getElementById('spinner');
-  spinner.style.display = 'none';
+
+  setTimeout(() => {
+    spinner.style.display = 'none';
+  }, 1000);
 });
 
 // Hamburger menu
@@ -27,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // Micro animations
 document.addEventListener("DOMContentLoaded", function () {
   let tl = gsap.timeline();
+
+  tl.delay(1.25);
 
   tl.from(".header-image-section", {
     x: -200,
