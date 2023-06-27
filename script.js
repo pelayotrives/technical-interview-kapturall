@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (submenu.style.display === "none" || submenu.style.display === "") {
-          event.preventDefault(); 
+          event.preventDefault();
           submenu.style.display = "block";
         } else {
           submenu.style.display = "none";
@@ -59,8 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", function () {
     if (window.innerWidth > 650) {
       nav.style.display = "";
+      document.querySelectorAll(".submenu").forEach((submenu) => {
+        submenu.style.display = "";
+      });
     }
   });
+
 });
 
 // Micro animations
