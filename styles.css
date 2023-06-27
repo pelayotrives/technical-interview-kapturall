@@ -228,7 +228,7 @@ button[disabled] {
 .introduction-container-description p {
     margin: 0 auto;
     width: 70%;
-    text-align: justify;
+    text-align: left;
 }
 
 .introduction-columns {
@@ -540,7 +540,7 @@ button[disabled] {
 @media (max-width: 588px) {
     .introduction-container-description p {
         width: auto;
-        text-align: justify;
+        text-align: left;
     }
 
     .introduction-column {
