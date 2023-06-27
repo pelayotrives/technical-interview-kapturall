@@ -432,7 +432,7 @@ button[disabled] {
     }
 }
 
-@media (max-width: 883px) {
+@media (max-width: 882px) {
     .introduction-columns {
         justify-content: center;
     }
@@ -538,6 +538,15 @@ button[disabled] {
 }
 
 @media (max-width: 588px) {
+    .introduction-container-description p {
+        width: auto;
+        text-align: justify;
+    }
+
+    .introduction-column {
+        width: auto;
+    }
+
     .introduction-column:nth-child(2) {
         padding-top: 50px;
     }
